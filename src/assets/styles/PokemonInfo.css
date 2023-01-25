@@ -1,0 +1,277 @@
+.pokemon-detail-view {
+    width: 85%;
+    margin: 150px auto 50px auto;
+}
+
+.pokemon-detail-view button {
+    position: absolute;
+    top: 170px;
+    left: 50px;
+    padding: 5px;
+    font-size: 35px;
+    background-color: rgb(197, 100, 100);
+    border: 0;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pokemon-detail-view button:hover {
+    background-color: rgb(223, 88, 88);
+}
+
+.pokemon-detail-view > div {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid gray;
+    box-shadow: 0 0 5px;
+    background-color: rgb(255, 245, 245);
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.pokemon-detail-view > div:first-child > div:first-child {
+    height: 109px;
+    margin: 3px;
+    border-radius: 10px 10px 0 0;
+}
+
+.pokemon-detail-view img {
+    height: 218px;
+    position: absolute;
+    top: 150px;
+    left: 40%;
+}
+
+.pokemon-detail-view > div:first-child > h2 {
+    width: 80px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pokemon-detail-view .pokemon-name {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pokemon-detail-view .pokemon-name > h2 {
+    font-size: 40px;
+    -webkit-text-stroke: 1px #000;
+}
+
+.pokemon-detail-view .pokemon-name > div {
+    height: 2px;
+    width: 35%;
+    padding: 0;
+    background-color: rgba(128, 128, 128, 0.5);
+    margin-top: 30px;
+}
+
+.pokemon-detail-view .pokemon-characteristics {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+}
+
+.pokemon-detail-view .pokemon-characteristics h5 {
+    color: gray;
+    font-size: 15px;
+}
+
+.pokemon-detail-view .pokemon-characteristics h3 {
+    font-size: 20px;
+}
+
+.pokemon-detail-view .pokemon-type-abilitie {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.pokemon-detail-view .pokemon-type-abilitie .type-abilitie {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pokemon-detail-view .pokemon-type-abilitie h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.pokemon-detail-view .pokemon-type-abilitie span {
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    padding: 3px 10px;
+    font-size: 18px;
+}
+
+.pokemon-detail-view .pokemon-stats {
+    padding: 30px;
+}
+
+.pokemon-detail-view .pokemon-stats h2 {
+    font-size: 28px;
+}
+
+.pokemon-detail-view .pokemon-stats span {
+    font-weight: 500;
+}
+
+.pokemon-detail-view .pokemon-stats > div:first-child {
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+
+.pokemon-detail-view .pokemon-stats > div:first-child > div:last-child {
+    height: 2px;
+    width: 91%;
+    padding: 0;
+    background-color: rgba(128, 128, 128, 0.5);
+    margin-top: 20px;
+}
+
+.pokemon-detail-view .stats:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.pokemon-detail-view .stats > div:first-child {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pokemon-detail-view .stats > div:last-child {
+    position: relative;
+    border: 1px solid;
+    border-radius: 20px
+}
+
+.pokemon-detail-view .stats > div:last-child div {
+    position: relative;
+    width: 0;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.pokemon-detail-view > div:last-child {
+    margin-top: 40px;
+    padding: 30px;
+}
+
+.pokemon-detail-view > div:last-child > div:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pokemon-detail-view > div:last-child > div:first-child div {
+    height: 2px;
+    width: 83%;
+    padding: 0;
+    background-color: rgba(128, 128, 128, 0.5);
+    margin-top: 20px;
+}
+
+.pokemon-detail-view > div:last-child > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pokemon-detail-view > div:last-child > div:last-child span {
+    background-color: rgba(128, 128, 128, 0.3);
+    padding: 10px 20px;
+    border-radius: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .pokemon-detail-view .pokemon-name > div {
+        width: 30%;
+    }
+    .pokemon-detail-view .pokemon-stats > div:first-child > div:last-child {
+        width: 85%;
+    }
+    .pokemon-detail-view > div:last-child > div:first-child div {
+        width: 75%;
+    }
+}
+
+@media (max-width: 700px) {
+    .pokemon-detail-view img {
+        height: 180px;
+    }
+    .pokemon-detail-view {
+        margin-top: 120px;
+    }
+    .pokemon-detail-view .pokemon-name > div {
+        width: 25%;
+    }
+    .pokemon-detail-view .pokemon-stats > div:first-child > div:last-child {
+        width: 80%;
+    }
+    .pokemon-detail-view > div:last-child > div:first-child div {
+        width: 65%;
+    }
+    .pokemon-detail-view button {
+        top: 150px;
+        left: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .pokemon-detail-view img {
+        height: 150px;
+        left: 30%;
+    }
+    .pokemon-detail-view {
+        margin-top: 100px;
+    }
+    .pokemon-detail-view .pokemon-name > div {
+        width: 20%;
+    }
+    .pokemon-detail-view .pokemon-type-abilitie .type-abilitie {
+        flex-direction: column;
+    }
+    .pokemon-detail-view .pokemon-stats > div:first-child > div:last-child {
+        width: 75%;
+    }
+    .pokemon-detail-view > div:last-child > div:first-child div {
+        width: 57%;
+    }
+    .pokemon-detail-view button {
+        top: 135px;
+        left: 15px;
+    }
+}
+
+@media (max-width: 427px) {
+    .pokemon-detail-view {
+        margin-top: 120px;
+    }
+    .pokemon-detail-view .pokemon-stats > div:first-child > div:last-child {
+        width: 70%;
+    }
+    .pokemon-detail-view > div:last-child > div:first-child div {
+        width: 47%;
+    }
+    .pokemon-detail-view button {
+        top: 110px;
+    }
+}
+
+@media (max-width: 350px) {
+    .pokemon-detail-view img {
+        height: 150px;
+        left: 24%;
+    }
+    .pokemon-detail-view .pokemon-name > div {
+        width: 15%;
+    }
+    .pokemon-detail-view > div:last-child > div:first-child div {
+        width: 40%;
+    }
+}

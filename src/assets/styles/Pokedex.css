@@ -1,0 +1,128 @@
+.pokedex h2 {
+    text-align: center;
+}
+
+.pokedex span {
+    color: red;
+}
+
+.pokedex > div:last-child {
+    width: 85%;
+    margin: 20px auto;
+}
+
+.pokedex .search-pokemon {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pokedex .search-pokemon select {
+    font-size: 16px;
+    width: 300px;
+}
+
+.pokedex .no-pokemon {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.pokedex .no-pokemon h2 {
+    font-size: 30px;
+}
+
+.pokedex .no-pokemon img {
+    width: 150px;
+}
+
+.pokedex .buttons {
+    display: flex;
+    margin-bottom: 70px;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pokedex .buttons button {
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.pokedex .buttons button:hover {
+    font-size: 22px;
+}
+
+.pokedex .buttons button:first-child, .pokedex .buttons button:last-child {
+    background-color: rgb(236, 85, 71);
+    font-size: 25px;
+    color: #fff;
+}
+
+.pokedex .buttons button:first-child:hover, .pokedex .buttons button:last-child:hover {
+    background-color: rgba(236, 85, 71, 0.80);
+}
+
+.pokedex .buttons button:disabled {
+    visibility: hidden;
+}
+
+.pokedex .pokemon-error {
+    margin-top: 45px;
+}
+
+@media (max-width: 885px) {
+    .pokedex .search-pokemon select {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pokedex h2 {
+        font-size: 21px;
+    }
+    .pokedex .search-pokemon form input {
+        padding: 5px 20px;
+        font-size: 15px;
+        width: 250px;
+    }
+    .pokedex .search-pokemon form button {
+        padding: 5px;
+        font-size: 15px;
+    }
+    .pokedex .search-pokemon select {
+        width: 150px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 611px) {
+    .pokedex h2 {
+        font-size: 18px;
+    }
+    .pokedex .search-pokemon form input {
+        font-size: 13px;
+        width: 180px;
+    }
+    .pokedex .search-pokemon form button {
+        font-size: 13px;
+    }
+    .pokedex .search-pokemon select {
+        font-size: 13px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 427px) {
+    .pokedex h2 {
+        font-size: 16px;
+    }
+    .pokedex .search-pokemon {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}

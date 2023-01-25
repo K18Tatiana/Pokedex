@@ -1,0 +1,160 @@
+.home {
+    padding-top: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #b7cceb;
+    overflow: hidden;
+}
+
+.home div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home div:first-child h1 {
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.home div:first-child img {
+    width: 180px;
+}
+
+.home div:first-child h1 span {
+    color: red;
+}
+
+.home h2 {
+    margin: 0 auto;
+    font-size: 30px;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 10ch;
+    animation: typing 2.5s infinite steps(11);
+    overflow: hidden;
+}
+
+.home form {
+    margin-top: 20px;
+}
+
+@keyframes typing {
+    0% { width: 5ch; }
+    60% { width: 11ch; }
+    100% { width: 5ch; }
+}
+
+.home p {
+    font-size: 20px;
+}
+
+.home section .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url("/wave.png");
+    background-size: 1000px 100px;
+}
+
+section .wave.wave1 {
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+section .wave.wave2 {
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+section .wave.wave3 {
+    animation: animate2 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+
+section .wave.wave4 {
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+@media (max-width: 515px) {
+    .home div:first-child h1 {
+        font-size: 40px;
+    }
+    .home div:first-child img {
+        width: 150px;
+    }
+    .home h2 {
+        font-size: 20px;
+    }
+    .home p {
+        font-size: 15px;
+    }
+    .home form input {
+        padding: 5px 20px;
+        font-size: 15px;
+        width: 250px;
+    }
+    .home form button {
+        padding: 5px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 373px) {
+    .home div:first-child h1 {
+        font-size: 30px;
+    }
+    .home div:first-child img {
+        width: 130px;
+    }
+    .home h2 {
+        font-size: 18px;
+    }
+    .home p {
+        font-size: 14px;
+    }
+    .home form input {
+        font-size: 13px;
+        width: 180px;
+    }
+    .home form button {
+        font-size: 13px;
+    }
+}
