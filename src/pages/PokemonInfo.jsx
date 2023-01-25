@@ -92,14 +92,15 @@ const PokemonInfo = () => {
                                 <span style={ {backgroundColor: color.color4} }>{pokemonType?.[1]}</span>
                             </div>
                             :
-                            <span style={ {backgroundColor: color.color3} }>{pokemonType?.[0]}</span>
+                            <span className="type-abilitie" style={ {backgroundColor: color.color3} }>{pokemonType?.[0]}</span>
                         }
                     </div>
                     <div>
                         <h3>Abilities</h3>
                         <div className="type-abilitie">
-                            <span>{pokemonAbilities?.[0]}</span>
-                            <span>{pokemonAbilities?.[1]}</span>
+                            {
+                                pokemonAbilities?.map( (abilitie, index) => <span key={index}>{abilitie}</span> )
+                            }
                         </div>
                     </div>
                 </div>
