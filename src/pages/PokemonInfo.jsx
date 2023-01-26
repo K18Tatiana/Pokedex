@@ -72,7 +72,7 @@ const PokemonInfo = () => {
                 <div className="pokemon-name">
                     <div></div>
                     <h1 
-                    style={ darkMode ? {color: color.color1, WebkitTextStroke: '1px #fff'} : { color: color.color1 } } 
+                    style={ darkMode ? {color: color.color1, WebkitTextStroke: '1px #fff'} : { color: color.color1, WebkitTextStroke: '1px #000' } } 
                     >
                         {namePokemon?.replace(letter, letter.toUpperCase())}
                     </h1>

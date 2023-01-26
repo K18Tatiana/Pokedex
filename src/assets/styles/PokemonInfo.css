@@ -57,7 +57,6 @@
 
 .pokemon-name > h2 {
     font-size: 50px;
-    -webkit-text-stroke: 1px #000;
 }
 
 .pokemon-name > div {
