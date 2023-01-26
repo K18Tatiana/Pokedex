@@ -101,6 +101,7 @@
 .input-dark {
     border-color: #fff;
     background-color: rgba(0, 0, 0, 0.35);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .input-dark:hover {
