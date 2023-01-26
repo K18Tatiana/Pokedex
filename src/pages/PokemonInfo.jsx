@@ -147,7 +147,9 @@ const PokemonInfo = () => {
                     </div>
                 </div>
             </div>
-            <button onClick={ () => navigate(-1) }><i className='bx bx-chevron-left'></i></button>
+            <button className="btn-return" onClick={ () => navigate(-1) }>
+                <i className='bx bx-chevron-left'></i>
+            </button>
             <div>
                 <div>
                     <h2>Movements</h2>

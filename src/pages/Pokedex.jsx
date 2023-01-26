@@ -8,6 +8,8 @@ import { useNavigate } from 'react-router-dom'
 const Pokedex = () => {
 
     const nameInfo = useSelector( state => state.name )
+    const pokemonsPerPage = useSelector( state => state.pokemonPage )
+    const darkMode = useSelector( state => state.darkMode )
 
     const [ pokemons, setPokemons ] = useState( [] )
     const [ pokemonsType, setPokemonsType ] = useState( [] )
@@ -65,7 +67,6 @@ const Pokedex = () => {
     }
 
     const [ page, setPage ] = useState(1)
-    const pokemonsPerPage = 16
     const lastIndex = page * pokemonsPerPage
     const firstIndex = lastIndex - pokemonsPerPage
 
@@ -84,19 +85,20 @@ const Pokedex = () => {
 
     return (
         <div className="pokedex">
-            { /* 
-            <div className="mode" id='mode'>
-                <i className='bx bxs-toggle-right'></i>
-            </div>
-            */ }
+            <button onClick={ () => navigate(`/config`) }>
+                <i className='bx bxs-cog' style={ darkMode ? {} : { color: '#fff' } }></i>
+            </button>
             <div>
-                <h2><span>Welcome { nameInfo }!</span> Here you can find your favorite pokemon</h2>
+                <h2 className={ darkMode ? 'h2-dark' : '' }><span style={ darkMode ? { color: 'lightcoral'} : {} }>Welcome { nameInfo }!</span> Here you can find your favorite pokemon</h2>
                 <div className='search-pokemon'>
                     <form onSubmit={ (e) => handleSubmit(e) }>
-                        <input type="text" placeholder='Look for a pokemon...' />
-                        <button type='submit'>Search</button>
+                        <input 
+                        type="text" placeholder='Look for a pokemon...' 
+                        className={ darkMode ? 'input-dark' : '' } 
+                        />
+                        <button type='submit' className={ darkMode ? 'btn-submit-dark' : '' }>Search</button>
                     </form>
-                    <select name="" id="" onChange={selectedType}>
+                    <select name="" id="" onChange={selectedType} className={ darkMode ? 'select-dark' : '' } >
                         <option value="https://pokeapi.co/api/v2/pokemon?offset=0&limit=1279">
                             All pokemon    
                         </option>
@@ -151,7 +153,7 @@ const Pokedex = () => {
                         </div>
                     </div>
                     :
-                    <div className='no-pokemon'>
+                    <div className='no-pokemon' style={ darkMode ? { color: 'rgba(255, 255, 255, 0.8)' } : {} }>
                         <h2>There are no pokemon of this type</h2>
                         <img src="/mapa.png" alt="" />
                     </div>

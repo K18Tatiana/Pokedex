@@ -3,7 +3,7 @@
     margin: 150px auto 50px auto;
 }
 
-.pokemon-detail-view button {
+.btn-return {
     position: absolute;
     top: 170px;
     left: 50px;
@@ -16,7 +16,7 @@
     cursor: pointer;
 }
 
-.pokemon-detail-view button:hover {
+.btn-return:hover {
     background-color: rgb(223, 88, 88);
 }
 
@@ -219,7 +219,7 @@
     .pokemon-detail-view > div:last-child > div:first-child div {
         width: 65%;
     }
-    .pokemon-detail-view button {
+    .btn-return {
         top: 150px;
         left: 30px;
     }
@@ -245,7 +245,7 @@
     .pokemon-detail-view > div:last-child > div:first-child div {
         width: 57%;
     }
-    .pokemon-detail-view button {
+    .btn-return {
         top: 135px;
         left: 15px;
     }
@@ -261,7 +261,7 @@
     .pokemon-detail-view > div:last-child > div:first-child div {
         width: 47%;
     }
-    .pokemon-detail-view button {
+    .btn-return {
         top: 110px;
     }
 }

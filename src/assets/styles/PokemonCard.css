@@ -16,7 +16,7 @@ ul li {
     text-align: center;
     align-items: center;
     width: 230px;
-    border: 10px solid;
+    border: 10px solid rgb(116, 198, 157);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;

@@ -3,11 +3,14 @@ import axios from 'axios'
 import '../assets/styles/PokemonCard.css'
 import { useNavigate } from 'react-router-dom'
 import useGetColor from '../hooks/useGetColor'
+import { useSelector } from 'react-redux'
 
 const PokemonCard = ( {url} ) => {
 
     const [ pokemon, setPokemon ] = useState( {} )
     const { getColor, color } = useGetColor()
+
+    const darkMode = useSelector( state => state.darkMode )
 
     const navigate = useNavigate()
 
@@ -33,7 +36,7 @@ const PokemonCard = ( {url} ) => {
     return (
         <li 
         className="pokemon-card" 
-        style={ {borderColor: color.color1, background: color.color2} }
+        style={ darkMode ? {borderColor: color.color1, background: color.color5} : {borderColor: color.color1, background: color.color2} }
         onClick={ () => navigate(`/pokedex/${name}`) }
         >
             {
