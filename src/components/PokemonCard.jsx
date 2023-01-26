@@ -57,9 +57,9 @@ const PokemonCard = ( {url} ) => {
                     {
                         pokemonsType?.length > 1
                         ?
-                        <h4>{pokemonsType?.[0]} / {pokemonsType?.[1]}</h4>
+                        <h4 style={ darkMode ? { color: '#fff' } : {} } >{pokemonsType?.[0]} / {pokemonsType?.[1]}</h4>
                         :
-                        <h4>{pokemonsType?.[0]}</h4>
+                        <h4 style={ darkMode ? { color: '#fff' } : {} } >{pokemonsType?.[0]}</h4>
                     }
                 </div>
                 <div>

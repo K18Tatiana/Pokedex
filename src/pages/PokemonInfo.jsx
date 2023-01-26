@@ -71,7 +71,11 @@ const PokemonInfo = () => {
                 <h2>#{pokemon?.id}</h2>
                 <div className="pokemon-name">
                     <div></div>
-                    <h2 style={ {color: color.color1} }>{namePokemon?.replace(letter, letter.toUpperCase())}</h2>
+                    <h1 
+                    style={ darkMode ? {color: color.color1, WebkitTextStroke: '1px #fff'} : { color: color.color1 } } 
+                    >
+                        {namePokemon?.replace(letter, letter.toUpperCase())}
+                    </h1>
                     <div></div>
                 </div>
                 <div className="pokemon-characteristics">
