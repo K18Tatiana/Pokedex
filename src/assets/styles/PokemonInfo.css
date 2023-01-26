@@ -20,7 +20,7 @@
     background-color: rgb(223, 88, 88);
 }
 
-.pokemon-detail-view > div {
+.background-detail {
     display: flex;
     flex-direction: column;
     border: 2px solid gray;
@@ -50,17 +50,17 @@
     text-align: center;
 }
 
-.pokemon-detail-view .pokemon-name {
+.pokemon-name {
     display: flex;
     justify-content: space-around;
 }
 
-.pokemon-detail-view .pokemon-name > h2 {
+.pokemon-name > h2 {
     font-size: 40px;
     -webkit-text-stroke: 1px #000;
 }
 
-.pokemon-detail-view .pokemon-name > div {
+.pokemon-name > div {
     height: 2px;
     width: 35%;
     padding: 0;
@@ -68,23 +68,23 @@
     margin-top: 30px;
 }
 
-.pokemon-detail-view .pokemon-characteristics {
+.pokemon-characteristics {
     display: flex;
     justify-content: center;
     gap: 50px;
     text-align: center;
 }
 
-.pokemon-detail-view .pokemon-characteristics h5 {
+.pokemon-characteristics h5 {
     color: gray;
     font-size: 15px;
 }
 
-.pokemon-detail-view .pokemon-characteristics h3 {
+.pokemon-characteristics h3 {
     font-size: 20px;
 }
 
-.pokemon-detail-view .pokemon-type-abilitie {
+.pokemon-type-abilitie {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -92,43 +92,43 @@
     margin: 0 10px;
 }
 
-.pokemon-detail-view .pokemon-type-abilitie .type-abilitie {
+.type-abilitie {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.pokemon-detail-view .pokemon-type-abilitie h3 {
+.pokemon-type-abilitie h3 {
     font-size: 20px;
     margin-bottom: 15px;
 }
 
-.pokemon-detail-view .pokemon-type-abilitie span {
+.pokemon-type-abilitie span {
     border: 1px solid rgba(128, 128, 128, 0.5);
     padding: 3px 10px;
     font-size: 18px;
 }
 
-.pokemon-detail-view .pokemon-stats {
+.pokemon-stats {
     padding: 30px;
 }
 
-.pokemon-detail-view .pokemon-stats h2 {
+.pokemon-stats h2 {
     font-size: 28px;
 }
 
-.pokemon-detail-view .pokemon-stats span {
+.pokemon-stats span {
     font-weight: 500;
 }
 
-.pokemon-detail-view .pokemon-stats > div:first-child {
+.pokemon-stats > div:first-child {
     display: flex;
     margin-bottom: 25px;
     justify-content: space-between;
 }
 
-.pokemon-detail-view .pokemon-stats > div:first-child > div:last-child {
+.pokemon-stats > div:first-child > div:last-child {
     height: 2px;
     width: 91%;
     padding: 0;
@@ -136,23 +136,23 @@
     margin-top: 20px;
 }
 
-.pokemon-detail-view .stats:not(:last-child) {
+.stats:not(:last-child) {
     margin-bottom: 25px;
 }
 
-.pokemon-detail-view .stats > div:first-child {
+.stats > div:first-child {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.pokemon-detail-view .stats > div:last-child {
+.stats > div:last-child {
     position: relative;
     border: 1px solid;
     border-radius: 20px
 }
 
-.pokemon-detail-view .stats > div:last-child div {
+.stats > div:last-child div {
     position: relative;
     width: 0;
     height: 8px;
@@ -183,7 +183,7 @@
     gap: 10px;
 }
 
-.pokemon-detail-view > div:last-child > div:last-child span {
+.move {
     background-color: rgba(128, 128, 128, 0.3);
     padding: 10px 20px;
     border-radius: 1.5rem;
@@ -191,11 +191,25 @@
     text-align: center;
 }
 
+/* Modo oscuro */
+.background-detail-dark {
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    background-color: rgb(0, 0, 0, 0.6);
+    border-radius: 10px;
+    gap: 20px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.move-dark {
+    background-color: rgba(160, 160, 160, 0.7);
+}
+
 @media (max-width: 900px) {
-    .pokemon-detail-view .pokemon-name > div {
+    .pokemon-name > div {
         width: 30%;
     }
-    .pokemon-detail-view .pokemon-stats > div:first-child > div:last-child {
+    .pokemon-stats > div:first-child > div:last-child {
         width: 85%;
     }
     .pokemon-detail-view > div:last-child > div:first-child div {
@@ -210,10 +224,10 @@
     .pokemon-detail-view {
         margin-top: 120px;
     }
-    .pokemon-detail-view .pokemon-name > div {
+    .pokemon-name > div {
         width: 25%;
     }
-    .pokemon-detail-view .pokemon-stats > div:first-child > div:last-child {
+    .pokemon-stats > div:first-child > div:last-child {
         width: 80%;
     }
     .pokemon-detail-view > div:last-child > div:first-child div {
@@ -233,13 +247,13 @@
     .pokemon-detail-view {
         margin-top: 100px;
     }
-    .pokemon-detail-view .pokemon-name > div {
+    .pokemon-name > div {
         width: 20%;
     }
-    .pokemon-detail-view .pokemon-type-abilitie .type-abilitie {
+    .type-abilitie {
         flex-direction: column;
     }
-    .pokemon-detail-view .pokemon-stats > div:first-child > div:last-child {
+    .pokemon-stats > div:first-child > div:last-child {
         width: 75%;
     }
     .pokemon-detail-view > div:last-child > div:first-child div {
@@ -255,7 +269,7 @@
     .pokemon-detail-view {
         margin-top: 120px;
     }
-    .pokemon-detail-view .pokemon-stats > div:first-child > div:last-child {
+    .pokemon-stats > div:first-child > div:last-child {
         width: 70%;
     }
     .pokemon-detail-view > div:last-child > div:first-child div {
@@ -271,7 +285,7 @@
         height: 150px;
         left: 24%;
     }
-    .pokemon-detail-view .pokemon-name > div {
+    .pokemon-name > div {
         width: 15%;
     }
     .pokemon-detail-view > div:last-child > div:first-child div {

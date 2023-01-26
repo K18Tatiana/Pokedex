@@ -11,39 +11,40 @@
     margin: 20px auto;
 }
 
-.pokedex .search-pokemon {
+.search-pokemon {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 
-.pokedex .search-pokemon select {
+.search-pokemon select {
     font-size: 16px;
     width: 300px;
+    padding-left: 20px;
 }
 
-.pokedex .no-pokemon {
+.no-pokemon {
     margin-top: 70px;
     text-align: center;
 }
 
-.pokedex .no-pokemon h2 {
+.no-pokemon h2 {
     font-size: 30px;
 }
 
-.pokedex .no-pokemon img {
+.no-pokemon img {
     width: 150px;
 }
 
-.pokedex .buttons {
+.buttons {
     display: flex;
     margin-bottom: 70px;
     justify-content: center;
     gap: 5px;
 }
 
-.pokedex .buttons button {
+.buttons button {
     font-size: 18px;
     width: 40px;
     height: 40px;
@@ -52,25 +53,25 @@
     cursor: pointer;
 }
 
-.pokedex .buttons button:hover {
+.buttons button:hover {
     font-size: 22px;
 }
 
-.pokedex .buttons button:first-child, .pokedex .buttons button:last-child {
+.buttons button:first-child, .buttons button:last-child {
     background-color: rgb(236, 85, 71);
     font-size: 25px;
     color: #fff;
 }
 
-.pokedex .buttons button:first-child:hover, .pokedex .buttons button:last-child:hover {
+.buttons button:first-child:hover, .buttons button:last-child:hover {
     background-color: rgba(236, 85, 71, 0.80);
 }
 
-.pokedex .buttons button:disabled {
+.buttons button:disabled {
     visibility: hidden;
 }
 
-.pokedex .pokemon-error {
+.pokemon-error {
     margin-top: 45px;
 }
 
@@ -118,7 +119,6 @@
 
 .select-dark {
     cursor: pointer;
-    padding-left: 20px;
     border-color: #000;
     background-color: rgb(53, 53, 53);
     color: rgba(255, 255, 255, 0.8);
@@ -127,7 +127,7 @@
 /* Responsive */
 
 @media (max-width: 885px) {
-    .pokedex .search-pokemon select {
+    .search-pokemon select {
         width: 200px;
     }
 }
@@ -136,16 +136,16 @@
     .pokedex h2 {
         font-size: 21px;
     }
-    .pokedex .search-pokemon form input {
+    .search-pokemon form input {
         padding: 5px 20px;
         font-size: 15px;
         width: 250px;
     }
-    .pokedex .search-pokemon form button {
+    .search-pokemon form button {
         padding: 5px;
         font-size: 15px;
     }
-    .pokedex .search-pokemon select {
+    .search-pokemon select {
         width: 150px;
         font-size: 15px;
     }
@@ -158,16 +158,17 @@
     .pokedex h2 {
         font-size: 18px;
     }
-    .pokedex .search-pokemon form input {
+    .search-pokemon form input {
         font-size: 13px;
         width: 180px;
     }
-    .pokedex .search-pokemon form button {
+    .search-pokemon form button {
         font-size: 13px;
     }
-    .pokedex .search-pokemon select {
+    .search-pokemon select {
         font-size: 13px;
         width: 100px;
+        padding-left: 0;
     }
     .pokedex > button {
         font-size: 30px;
@@ -179,7 +180,7 @@
     .pokedex h2 {
         font-size: 16px;
     }
-    .pokedex .search-pokemon {
+    .search-pokemon {
         flex-direction: column;
         gap: 10px;
         align-items: center;

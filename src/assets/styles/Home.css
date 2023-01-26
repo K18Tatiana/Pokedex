@@ -53,7 +53,7 @@
     font-size: 20px;
 }
 
-.home section .wave {
+.wave {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -63,7 +63,7 @@
     background-size: 1000px 100px;
 }
 
-section .wave.wave1 {
+.wave.wave1 {
     animation: animate 30s linear infinite;
     z-index: 1000;
     opacity: 1;
@@ -71,7 +71,7 @@ section .wave.wave1 {
     bottom: 0;
 }
 
-section .wave.wave2 {
+.wave.wave2 {
     animation: animate2 15s linear infinite;
     z-index: 999;
     opacity: 0.5;
@@ -79,7 +79,7 @@ section .wave.wave2 {
     bottom: 10px;
 }
 
-section .wave.wave3 {
+.wave.wave3 {
     animation: animate2 30s linear infinite;
     z-index: 998;
     opacity: 0.2;
@@ -87,7 +87,7 @@ section .wave.wave3 {
     bottom: 15px;
 }
 
-section .wave.wave4 {
+.wave.wave4 {
     animation: animate2 5s linear infinite;
     z-index: 997;
     opacity: 0.7;

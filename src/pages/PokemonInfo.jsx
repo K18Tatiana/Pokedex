@@ -3,12 +3,15 @@ import { useParams, useNavigate } from "react-router-dom"
 import axios from 'axios'
 import useGetColor from "../hooks/useGetColor"
 import '../assets/styles/PokemonInfo.css'
+import { useSelector } from "react-redux"
 
 const PokemonInfo = () => {
 
     const { name } = useParams()
     const [ pokemon, setPokemon ] = useState( {} )
     const { getColor, color } = useGetColor()
+
+    const darkMode = useSelector( state => state.darkMode )
 
     const navigate = useNavigate()
 
@@ -51,7 +54,7 @@ const PokemonInfo = () => {
 
     return (
         <div className="pokemon-detail-view">
-            <div>
+            <div className={ darkMode ? 'background-detail-dark background-detail' : 'background-detail' } >
                 <div style={ {backgroundColor: color.color1} }>
                     {
                         pokemon?.sprites?.other?.dream_world?.front_default !== null || pokemon?.sprites?.other?.['official-artwork']?.front_default !== null
@@ -150,14 +153,20 @@ const PokemonInfo = () => {
             <button className="btn-return" onClick={ () => navigate(-1) }>
                 <i className='bx bx-chevron-left'></i>
             </button>
-            <div>
+            <div className={ darkMode ? 'background-detail-dark background-detail' : 'background-detail' }>
                 <div>
                     <h2>Movements</h2>
                     <div></div>
                 </div>
                 <div>
                     {
-                        pokemonMoves?.map( (move, index) => <span key={index}>{move}</span> )
+                        pokemonMoves?.map( (move, index) => (
+                            <span key={index}
+                            className={ darkMode ? 'move move-dark' : 'move' }
+                            >
+                                {move}
+                            </span>
+                        ) )
                     }
                 </div>
             </div>
